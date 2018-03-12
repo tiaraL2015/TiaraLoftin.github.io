@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<title>Tiara Loftin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,html{
+  height: 100%;
+  color: black;
+  line-height: 1.8;
+}
+.bgimg-1, .bgimg-2, .bgimg-3{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1{
+  background-image: url("NCAT.jpg");
+
+  min-height: 100%;
+}
+.bgimg-2{
+  background-image: url("NCAT.jpg");
+  min-height: 400px;
+}
+.bgimg-3{
+  background-image: url("NCAT.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+</style>
+<body>
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+<i class="fa fa-bars"></i>
+<a href="#home" class="w3-bar-item w3-button">HOME</a>
+<a href="#about" class="w3-bar-item w3-button w3-hide-small"><img src="user.png" height=18 width=20> ABOUT</a>
+<a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><img src="minicons.png" height=20 width=25>PORTFOLIO</a>
+<a href="#contact" class="w3-bar-item w3-button w3w3-hide-small"><img src="16644-200.png" height=30 width=30>CONTACT</a>
+<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-grey"><img src="search-icon.png" height=20 width=20></a>
+</div>
+<div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
+  <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+  <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+  <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  <a href="#search" class="w3-bar-item w3-button" onclick="toggleFunction()">SEARCH</a>
+</div>
+</div>
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+
+    </div>
+  </div>
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">~ABOUT ME~</h3>
+  <p class="w3-center"><em>I love to design</em></p>
+  <p>My name is Tiara Loftin, and I was born in Greenville North Carolina, and I attended Ayden-Grifton high school which is where I deloveloped a love for design.
+     I love to design websites, characters, wallpapers, logos, etc.
+     My hobbies consist of drawing, designing, bowling, playing video games, and coding webpages in my spare time.
+      After graduation I would love to persue a career that involves some of my hobbies, which is why I chose Web Design as my career path. </p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b>Tiara Loftin</b></p>
+      <br>
+      <img src="IMG_0226.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Tiara" width="500" height="333">
+    </div>
+    <div class="w3-col m6 w3-hidden-small w3-padding-large">
+      <p>Welcome to my website. I am a junior, Computer Science major at North Carolina Agricultural and Technical State University, looking for an internship in Web Design.
+        I am very passionate about web design an am willing to learn all that I can about how to design websites.
+         What I love the most about web design is that you can freely express your creativity through web design.
+         I am currently taking an Internet Systems course at NC A&T State University, and it is by far my favorite class.
+          I can honestly say that I love web design and would love to broaden my knowledge of HTML, and Web Design as an intern.
+           I believe that I can bring creativity, enthusiasm, and an eagerness to learn to a desired company.</p>
+</div>
+</div>
+<p class="w3-large w3-center w3-padding-16">What I'm really good at:
+<p class="w3-wide"><img src="web.png" height=18 width=25> Web Design</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-indigo w3-center" style="width:90%">90%</div>
+</div>
+<p class="w3-wide"><img src="java.png" height=35 width=20> Java</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-indigo w3-center" style="width:85%">85%</div>
+</div>
+<p class="w3-wide"><img src="c_plus_plus.svg.png" height=25 width=30> C++</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-indigo w3-center" style="width:80%">80%</div>
+</div>
+<p class="w3-wide"><img src="logo-html.png" height=40 width=40> HTML</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-indigo w3-center" style="width:90%">90%</div>
+</div>
+<p class="w3-wide"><img src="adobe-photoshop.png" height=30 width=30> Adobe Photoshop</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-indigo w3-center" style="width:85%">85%</div>
+</div>
+</div>
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide"><font color="black">PORTFOLIO</font></span>
+  </div>
+</div>
+</div>
+<h3 style="text-align:center">MY WORK</h3>
+  <p style="text-align:center"><em>Here are some of my latest designs.<br> Click on the images to make them bigger</em></p><br>
+<div class="row" id="portfolio">
+  <div class="column">
+
+    <img src="alien2.png" height="461" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="IMG_1516.jpg" height="461" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="IMG_2074.jpg"  style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="b2b.png" height="461" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="IMG_0001.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="IMG_0002.png" height="700" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="IMG_0739.jpg" height="600" width="400" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="flyer .png" height="500" width="400" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <center>
+    <iframe src="Screen Shot.png" name="pittlightning" height="800" width="1400"></iframe>
+
+<p><a href="https://tiaral2015.github.io/pittlightning.github.io/" target="pittlightning">tiaral2015.github.io/pittlightning.github.io/</a></p>
+</center>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 7</div>
+      <img src="alien2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 7</div>
+      <img src="IMG_1516.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 7</div>
+      <img src="IMG_2074.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 7</div>
+      <img src="b2b.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5 / 7</div>
+      <img src="IMG_0001.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 7</div>
+      <img src="IMG_0002.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">7 / 7</div>
+      <img src="IMG_0739.jpg" style="width:100%">
+  </div>
+    <div class="mySlides">
+      <div class="numbertext">7 / 7</div>
+      <img src="flyer .png" style="width:100%">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide"><font color="black">CONTACT</font></span>
+  </div>
+</div>
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center"> WHERE I LIVE</h3>
+  <p class="w3-center"><em> I'd love to here from you!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+<div class="w3-col m8 w3-panel">
+  <div class="w3-large w3-margin-bottom">
+<img src="map.png" height=40 width=40> Greenville, NC <br>
+<img src="phone.png" height=40 width=40> Phone: 252-702-2594 <br>
+<img src="16644-200.png" height=40 width=40> Email: tloftin68@gmail.com <br>
+</div>
+<p>Please contact me, or leave me a message:
+
+  <form method="get" action=mailto:tloftin68@gmail.com target="tsloftin68@gmail.com">
+    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+      <div class="w3-half">
+        <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+        </div>
+      </div>
+      <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+      <button class="w3-button w3-indigo w3-right w3-section" type="submit" value="Send Email">
+        <img src="makefg.png" height=40 width=40> SEND MESSAGE</button>
+      </form>
+    </div>
+  </div>
+</div>
+<footer class="w3-center w3-indigo w3-padding-64">
+  <a href="" class="w3-button w3-light-grey"><img src="up.png" height=40 width=40> To the top</a>
+  <div class="w3-xlarge w3-section">
+<img src="Facebook-logo-png-image-76118.png" height=40 width=40>
+<img src="instagram_PNG16.png" height=40 width=40>
+<img src="LinkedIn_logo_white.png" height=40 width=100>
+</div>
+</footer>
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(35.6125, -77.3666667);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpOM-OXR9IpbYGwVfoi8Kk7fReSGVxZyM&callback=myMap"></script>
+</body>
+</html>
